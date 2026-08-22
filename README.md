@@ -34,7 +34,148 @@ Kumpulan fungsi Python untuk menghitung rumus matematika
     - Luas (`1/2 * diagonal 1 * diagonal 2`)
 
 ### 2. Bangun Ruang (`bangun_ruang.py`)
-```segera```
+- **Kubus**:
+    - Volume (`sisi ** 3`)
+    - Luas Permukaan (`6 * sisi ** 2`)
+    - Diagonal Sisi (`sisi * akar(2)`)
+    - Diagonal Ruang (`sisi * akar(3)`)
+- **Balok**:
+    - Volume (`panjang * lebar * tinggi`)
+    - Luas Permukaan (`2 * ((panjang * lebar) + (panjang * tinggi) + (lebar * tinggi))`)
+    - Diagonal Ruang (`akar(panjang ** 2 + lebar ** 2 + tinggi ** 2)`)
+- **Tabung / Silinder**:
+    - Volume (`3.14 * jari jari ** 2 * tinggi`)
+    - Luas Permukaan (`(2 * 3.14 * jari jari) * (jari jari + tinggi)`)
+    - Luas Selimut (`2 * 3.14 * jari jari * tinggi`)
+    - Luas Alas (`3.14 * jari jari ** 2`)
+- **Kerucut**:
+    - Volume (`1/3 * 3.14 * jari jari ** 2 * tinggi`)
+    - Luas Permukaan (`(3.14 * jari jari ** 2) + (3.14 * jari jari * garis pelukis)`)
+    - Luas Selimut (`3.14 * jari jari * garis pelukis`)
+    - Garis Pelukis (`akar(jari jari ** 2 + tinggi ** 2)`)
+- **Bola**:
+    - Volume (`4/3 * 3.14 * jari jari ** 3`)
+    - Luas Permukaan (`4 * 3.14 * jari jari ** 2`)
+- **Prisma Segi-N** *(rumus umum, dasar semua prisma di bawah)*:
+    - Volume (`luas alas * tinggi`)
+    - Luas Permukaan (`(2 * luas alas) + (keliling alas * tinggi)`)
+- **Prisma Segitiga**:
+    - Volume (`(1/2 * alas * tinggi segitiga) * tinggi prisma`)
+    - Luas Permukaan (`(2 * luas alas) + ((sisi 1 + sisi 2 + sisi 3) * tinggi prisma)`)
+- **Prisma Segiempat**:
+    - Volume (`(panjang * lebar) * tinggi prisma`)
+    - Luas Permukaan (`(2 * (panjang * lebar)) + (2 * (panjang + lebar) * tinggi prisma)`)
+- **Prisma Segilima** *(beraturan)*:
+    - Volume (`((5 * sisi ** 2) / (4 * tan(π/5))) * tinggi prisma`)
+    - Luas Permukaan (`(2 * luas alas) + ((5 * sisi) * tinggi prisma)`)
+- **Prisma Segienam** *(beraturan)*:
+    - Volume (`((3 * akar(3) / 2) * sisi ** 2) * tinggi prisma`)
+    - Luas Permukaan (`(2 * luas alas) + ((6 * sisi) * tinggi prisma)`)
+- **Prisma Trapesium**:
+    - Volume (`(1/2 * (sisi sejajar 1 + sisi sejajar 2) * tinggi trapesium) * tinggi prisma`)
+    - Luas Permukaan (`(2 * luas alas) + ((sisi sejajar 1 + sisi sejajar 2 + sisi miring 1 + sisi miring 2) * tinggi prisma)`)
+- **Limas Segi-N** *(rumus umum, dasar semua limas di bawah)*:
+    - Volume (`1/3 * luas alas * tinggi`)
+    - Luas Permukaan (`luas alas + jumlah luas sisi tegak`)
+- **Limas Segitiga**:
+    - Volume (`(1/3) * (1/2 * alas * tinggi segitiga) * tinggi limas`)
+    - Luas Permukaan (`luas alas + (1/2*sisi1*t1 + 1/2*sisi2*t2 + 1/2*sisi3*t3)`)
+- **Limas Segiempat** *(alas persegi)*:
+    - Volume (`(1/3) * sisi ** 2 * tinggi limas`)
+    - Tinggi Sisi Tegak (`akar(tinggi limas ** 2 + (sisi/2) ** 2)`)
+    - Luas Permukaan (`sisi ** 2 + (4 * (1/2 * sisi * tinggi sisi tegak))`)
+- **Limas Segilima** *(beraturan)*:
+    - Volume (`(1/3) * ((5 * sisi ** 2) / (4 * tan(π/5))) * tinggi limas`)
+    - Apotema Alas (`sisi / (2 * tan(π/5))`)
+    - Tinggi Sisi Tegak (`akar(tinggi limas ** 2 + apotema alas ** 2)`)
+    - Luas Permukaan (`luas alas + (5 * (1/2 * sisi * tinggi sisi tegak))`)
+- **Limas Segienam** *(beraturan)*:
+    - Volume (`(1/3) * ((3 * akar(3) / 2) * sisi ** 2) * tinggi limas`)
+    - Apotema Alas (`sisi / (2 * tan(π/6))`)
+    - Tinggi Sisi Tegak (`akar(tinggi limas ** 2 + apotema alas ** 2)`)
+    - Luas Permukaan (`luas alas + (6 * (1/2 * sisi * tinggi sisi tegak))`)
+- **Limas Trapesium**:
+    - Volume (`(1/3) * (1/2 * (sisi sejajar 1 + sisi sejajar 2) * tinggi trapesium) * tinggi limas`)
+    - Luas Permukaan (`luas alas + (1/2*ss1*t1 + 1/2*ss2*t2 + 1/2*sm1*t3 + 1/2*sm2*t4)`)
+- **Setengah Bola**:
+    - Volume (`2/3 * 3.14 * jari jari ** 3`)
+    - Luas Permukaan Dengan Alas (`3 * 3.14 * jari jari ** 2`)
+    - Luas Permukaan Tanpa Alas (`2 * 3.14 * jari jari ** 2`)
+- **Prisma Segitujuh** *(beraturan)*:
+    - Volume (`(7 * sisi ** 2) / (4 * tan(π/7)) * tinggi prisma`)
+    - Luas Permukaan (`(2 * luas alas) + (7 * sisi * tinggi prisma)`)
+- **Prisma Segidelapan** *(beraturan)*:
+    - Volume (`(8 * sisi ** 2) / (4 * tan(π/8)) * tinggi prisma`)
+    - Luas Permukaan (`(2 * luas alas) + (8 * sisi * tinggi prisma)`)
+- **Prisma Segisembilan** *(beraturan)*:
+    - Volume (`(9 * sisi ** 2) / (4 * tan(π/9)) * tinggi prisma`)
+    - Luas Permukaan (`(2 * luas alas) + (9 * sisi * tinggi prisma)`)
+- **Prisma Segisepuluh** *(beraturan)*:
+    - Volume (`(10 * sisi ** 2) / (4 * tan(π/10)) * tinggi prisma`)
+    - Luas Permukaan (`(2 * luas alas) + (10 * sisi * tinggi prisma)`)
+- **Limas Segitujuh** *(beraturan)*:
+    - Volume (`(1/3) * luas alas * tinggi limas`)
+    - Luas Permukaan (`luas alas + (7 * (1/2 * sisi * tinggi sisi tegak))`)
+- **Limas Segidelapan** *(beraturan)*:
+    - Volume (`(1/3) * luas alas * tinggi limas`)
+    - Luas Permukaan (`luas alas + (8 * (1/2 * sisi * tinggi sisi tegak))`)
+- **Limas Segisembilan** *(beraturan)*:
+    - Volume (`(1/3) * luas alas * tinggi limas`)
+    - Luas Permukaan (`luas alas + (9 * (1/2 * sisi * tinggi sisi tegak))`)
+- **Limas Segisepuluh** *(beraturan)*:
+    - Volume (`(1/3) * luas alas * tinggi limas`)
+    - Luas Permukaan (`luas alas + (10 * (1/2 * sisi * tinggi sisi tegak))`)
+- **Kerucut Terpancung**:
+    - Garis Pelukis (`akar((jari besar - jari kecil) ** 2 + tinggi ** 2)`)
+    - Volume (`1/3 * 3.14 * tinggi * (jari besar ** 2 + jari besar * jari kecil + jari kecil ** 2)`)
+    - Luas Permukaan (`(3.14 * (jari besar + jari kecil) * garis pelukis) + (3.14 * jari besar ** 2) + (3.14 * jari kecil ** 2)`)
+- **Limas Terpancung Segiempat**:
+    - Volume (`(tinggi/3) * (luas alas besar + luas alas kecil + akar(luas alas besar * luas alas kecil))`)
+    - Luas Permukaan (`luas alas besar + luas alas kecil + (4 * (1/2 * (sisi besar + sisi kecil) * tinggi sisi tegak))`)
+- **Tabung Berongga (Pipa)**:
+    - Volume (`3.14 * (jari luar ** 2 - jari dalam ** 2) * tinggi`)
+    - Luas Permukaan (`(2*3.14*jari luar*tinggi) + (2*3.14*jari dalam*tinggi) + (2 * 3.14 * (jari luar ** 2 - jari dalam ** 2))`)
+- **Bola Berongga (Cangkang Bola)**:
+    - Volume (`4/3 * 3.14 * (jari luar ** 3 - jari dalam ** 3)`)
+    - Luas Permukaan (`(4*3.14*jari luar ** 2) + (4*3.14*jari dalam ** 2)`)
+- **Tembereng Bola**:
+    - Volume (`(3.14 * tinggi tembereng ** 2 / 3) * (3 * jari bola - tinggi tembereng)`)
+    - Luas Permukaan Lengkung (`2 * 3.14 * jari bola * tinggi tembereng`)
+- **Elipsoid**:
+    - Volume (`4/3 * 3.14 * sumbu a * sumbu b * sumbu c`)
+- **Limas Terpancung Segitiga**:
+    - Volume (`(tinggi/3) * (luas alas besar + luas alas kecil + akar(luas alas besar * luas alas kecil))`)
+    - Luas Permukaan (`luas alas besar + luas alas kecil + jumlah luas sisi tegak`)
+- **Limas Terpancung Segilima** *(beraturan)*:
+    - Volume (`(tinggi/3) * (luas alas besar + luas alas kecil + akar(luas alas besar * luas alas kecil))`)
+    - Luas Permukaan (`luas alas besar + luas alas kecil + (5 * (1/2 * (sisi besar+sisi kecil) * tinggi sisi tegak))`)
+- **Limas Terpancung Segienam** *(beraturan)*:
+    - Volume (`(tinggi/3) * (luas alas besar + luas alas kecil + akar(luas alas besar * luas alas kecil))`)
+    - Luas Permukaan (`luas alas besar + luas alas kecil + (6 * (1/2 * (sisi besar+sisi kecil) * tinggi sisi tegak))`)
+- **Torus (Donat)**:
+    - Volume (`2 * π² * jari pusat * jari tabung ** 2`)
+    - Luas Permukaan (`4 * π² * jari pusat * jari tabung`)
+- **Tetrahedron** *(4 sisi segitiga)*:
+    - Volume (`(sisi ** 3 * akar(2)) / 12`)
+    - Luas Permukaan (`akar(3) * sisi ** 2`)
+- **Oktahedron** *(8 sisi segitiga)*:
+    - Volume (`(akar(2)/3) * sisi ** 3`)
+    - Luas Permukaan (`2 * akar(3) * sisi ** 2`)
+- **Dodekahedron** *(12 sisi segilima)*:
+    - Volume (`((15 + 7*akar(5))/4) * sisi ** 3`)
+    - Luas Permukaan (`3 * akar(25 + 10*akar(5)) * sisi ** 2`)
+- **Ikosahedron** *(20 sisi segitiga)*:
+    - Volume (`(5*(3+akar(5))/12) * sisi ** 3`)
+    - Luas Permukaan (`5 * akar(3) * sisi ** 2`)
+- **Zona Bola**:
+    - Luas Permukaan (`2 * 3.14 * jari bola * jarak antar bidang`)
+- **Sektor Bola**:
+    - Volume (`2/3 * 3.14 * jari bola ** 2 * tinggi tembereng`)
+- **Bipiramida**:
+    - Volume (`2 * (1/3) * luas alas * tinggi satu sisi`)
+    - Luas Permukaan (`jumlah luas semua sisi tegak`)
+- **Prismatoid**:
+    - Volume (`(tinggi/6) * (luas alas bawah + 4*luas penampang tengah + luas alas atas)`)
 
 ### 3. Aritmatika & Bilangan (`baris_deret.py`)
 - **Barisan Aritmatika**:
