@@ -3,9 +3,15 @@
 Kumpulan fungsi Python untuk menghitung rumus matematika
 
 ## Daftar Rumus Tersedia
+- **Aljabar**
 - **Bisnis Logic**
 - **Barisan Deret**
 - **Bangun Datar**
+- **Bangun Ruang**
+- **Matriks Vektor**
+- **Peluang**
+- **Statistika**
+- **Trigonometri**
 
 ### 1. Bangun Datar (`bangun_datar.py`)
 - **Persegi**:
@@ -233,8 +239,96 @@ Kumpulan fungsi Python untuk menghitung rumus matematika
     - Rumus (`(suku N * (suku N + 1) / 2) ** 2`)
 
 ### 4. Bisnis & Logika (`bisnis_logic.py`)
-- **Diskon**: Menghitung nilai potongan
-- **Bunga**: Menghitung bunga tunggal per bulan
+- **Diskon**:
+    - Rumus (`persen/100 * harga`)
+- **Bunga**:
+    - Rumus (`(besar pinjaman / jumlah bulan) * suku bunga/100`)
+- **Margin Laba Kotor**:
+    - Rumus (`laba kotor / pendapatan * 100`)
+- **Margin Laba Bersih**:
+    - Rumus (`laba bersih / pendapatan * 100`)
+- **Markup Pricing**:
+    - Rumus (`(harga jual - biaya) / biaya * 100`)
+- **Harga Jual dengan Target Laba**:
+    - Rumus (`biaya * (1 + target laba/100)`)
+- **Rasio Biaya terhadap Pendapatan**:
+    - Rumus (`total biaya / pendapatan * 100`)
+- **Titik Impas Unit / BEP Unit**:
+    - Rumus (`biaya tetap / (harga jual per unit - biaya variabel per unit)`)
+- **Titik Impas Rupiah / BEP Value**:
+    - Rumus (`biaya tetap / rasio margin kontribusi`)
+- **Margin Kontribusi**:
+    - Rumus (`harga jual per unit - biaya variabel per unit`)
+- **Rasio Margin Kontribusi**:
+    - Rumus (`margin kontribusi / harga jual per unit * 100`)
+- **Bunga Sederhana**:
+    - Rumus (`pokok * tingkat bunga * waktu`)
+- **Bunga Majemuk**:
+    - Rumus (`pokok * (1 + r/frekuensi)^(frekuensi*waktu)`)
+- **Future Value / Nilai Masa Depan**:
+    - Rumus (`PV * (1 + r/frekuensi)^(frekuensi*waktu)`)
+- **Present Value / Nilai Sekarang**:
+    - Rumus (`FV / (1 + r/frekuensi)^(frekuensi*waktu)`)
+- **Anuitas**:
+    - Rumus (`pembayaran * (1 - (1+r)^-n) / r`)
+- **Perpetuitas**:
+    - Rumus (`pembayaran / r`)
+- **Return on Investment / ROI**:
+    - Rumus (`keuntungan investasi / biaya investasi * 100`)
+- **Net Present Value / NPV**:
+    - Rumus (`-investasi awal + Σ(kas_t / (1+r)^t)`)
+- **Internal Rate of Return / IRR**:
+    - Rumus (nilai `r` saat `NPV = 0`)
+- **Payback Period**:
+    - Rumus (periode saat akumulasi arus kas menutup investasi awal)
+- **Profitability Index**:
+    - Rumus (`PV arus kas masuk / investasi awal`)
+- **Diskon Tunggal**:
+    - Rumus (`harga * persen diskon/100`)
+- **Diskon Berjajar / Berantai**:
+    - Rumus (`harga akhir = harga * Π(1 - diskon_i/100)`)
+- **Harga Netto setelah Diskon**:
+    - Rumus (`harga - nilai diskon`)
+- **PPN**:
+    - Rumus (`harga * persen PPN/100`)
+- **Harga Setelah Pajak**:
+    - Rumus (`harga * (1 + persen pajak/100)`)
+- **Harga Sebelum Pajak**:
+    - Rumus (`harga setelah pajak / (1 + persen pajak/100)`)
+- **Rasio Lancar / Current Ratio**:
+    - Rumus (`aset lancar / kewajiban lancar`)
+- **Rasio Cepat / Quick Ratio**:
+    - Rumus (`(aset lancar - persediaan) / kewajiban lancar`)
+- **Perputaran Persediaan**:
+    - Rumus (`HPP / rata-rata persediaan`)
+- **Perputaran Piutang**:
+    - Rumus (`penjualan kredit bersih / rata-rata piutang`)
+- **Earnings Per Share / EPS**:
+    - Rumus (`(laba bersih - dividen preferen) / jumlah saham beredar`)
+- **Return on Equity / ROE**:
+    - Rumus (`laba bersih / ekuitas * 100`)
+- **Return on Assets / ROA**:
+    - Rumus (`laba bersih / total aset * 100`)
+- **Debt-to-Equity Ratio**:
+    - Rumus (`total utang / ekuitas`)
+- **Depresiasi Garis Lurus**:
+    - Rumus (`(biaya perolehan - nilai residu) / umur manfaat`)
+- **Depresiasi Saldo Menurun**:
+    - Rumus (`nilai buku awal * tarif depresiasi`)
+- **Nilai Buku**:
+    - Rumus (`biaya perolehan - akumulasi depresiasi`)
+- **Nilai Residu**:
+    - Rumus (`biaya perolehan - total depresiasi`)
+- **Rata-rata Tertimbang**:
+    - Rumus (`Σ(nilai * bobot) / Σbobot`)
+- **Elastisitas Harga**:
+    - Rumus (`% perubahan jumlah diminta / % perubahan harga`)
+- **Proyeksi Penjualan**:
+    - Rumus (`penjualan awal * (1 + pertumbuhan)^periode`)
+- **Regresi Linear**:
+    - Rumus (`y = slope*x + intercept`)
+- **Prediksi Regresi Linear**:
+    - Rumus (`prediksi = slope*x + intercept`)
 
 ### 5. Aljabar (`aljabar.py`)
 - **Persamaan Linear Satu Variabel**:
@@ -439,49 +533,304 @@ Kumpulan fungsi Python untuk menghitung rumus matematika
     - Generator Permutasi (daftar konkret, bukan cuma hitungan)
 
 ### 9. Matriks & Vektor (`matriks_vektor.py`)
-- **Operasi Dasar Matriks** *(matriks berupa list of list)*:
-    - Tambah, Kurang (elemen per elemen)
-    - Kali Skalar
-    - Kali Matriks (baris × kolom)
-    - Transpose
-- **Determinan**:
-    - 2x2 (`ad - bc`)
-    - 3x3 (Aturan Sarrus)
-    - NxN (Ekspansi Kofaktor, rekursif)
-- **Invers Matriks**:
-    - 2x2 (`(1/det) * [d -b; -c a]`)
-    - 3x3 (Matriks Adjoin/Kofaktor Transpose)
-- **Utilitas Matriks**:
-    - Matriks Identitas
-    - Matriks Nol
-- **SPL dengan Matriks**:
-    - Metode Cramer berbasis matriks (untuk N variabel)
-- **Operasi Dasar Vektor**:
-    - Tambah, Kurang, Kali Skalar
-    - Panjang/Magnitudo (`√(x²+y²+...)`)
-    - Dot Product (`Σ(x1*x2)`)
-    - Cross Product (khusus 3D)
-    - Sudut Antar Vektor (`cos(θ) = (v1·v2)/(|v1||v2|)`)
-    - Proyeksi Vektor
-    - Normalisasi (jadi vektor satuan)
-    - Jarak Antar Titik/Vektor
-- **Invers Matriks NxN**:
-    - Metode Gauss-Jordan (generik, semua ukuran)
+- **Matriks Tambah**:
+    - Rumus (`A + B = [aij + bij]`)
+- **Matriks Kurang**:
+    - Rumus (`A - B = [aij - bij]`)
+- **Matriks Kali Skalar**:
+    - Rumus (`kA = [k * aij]`)
+- **Matriks Kali Matriks**:
+    - Rumus (`Cij = Σ(Aik * Bkj)`)
+- **Matriks Transpose**:
+    - Rumus (`A^T[j][i] = A[i][j]`)
+- **Determinan 2x2**:
+    - Rumus (`ad - bc`)
+- **Determinan 3x3**:
+    - Rumus (aturan Sarrus / ekspansi kofaktor 3x3)
+- **Determinan NxN**:
+    - Rumus (ekspansi kofaktor rekursif)
+- **Invers 2x2**:
+    - Rumus (`(1/det) * [[d, -b], [-c, a]]`)
+- **Invers 3x3**:
+    - Rumus (`A^-1 = adjoin(A) / det(A)`)
+- **Matriks Identitas**:
+    - Rumus (`I[i][j] = 1 jika i == j, selain itu 0`)
+- **Matriks Nol**:
+    - Rumus (`semua elemen = 0`)
+- **SPL Cramer Matriks**:
+    - Rumus (`xi = det(Ai) / det(A)`)
+- **Vektor Tambah**:
+    - Rumus (`u + v = [ui + vi]`)
+- **Vektor Kurang**:
+    - Rumus (`u - v = [ui - vi]`)
+- **Vektor Kali Skalar**:
+    - Rumus (`kv = [k * vi]`)
+- **Panjang / Magnitudo Vektor**:
+    - Rumus (`|v| = akar(Σvi²)`)
+- **Dot Product**:
+    - Rumus (`u · v = Σ(ui * vi)`)
+- **Cross Product**:
+    - Rumus (`u x v = [u2v3-u3v2, u3v1-u1v3, u1v2-u2v1]`)
+- **Sudut Antar Vektor**:
+    - Rumus (`θ = arccos((u·v) / (|u| * |v|))`)
+- **Proyeksi Vektor**:
+    - Rumus (`proj_v(u) = ((u·v) / (v·v)) * v`)
+- **Normalisasi Vektor**:
+    - Rumus (`v satuan = v / |v|`)
+- **Jarak Antar Titik / Vektor**:
+    - Rumus (`jarak = |u - v|`)
+- **Invers NxN**:
+    - Rumus (metode Gauss-Jordan)
 - **Eliminasi Gauss**:
-    - Solusi SPL (lebih efisien dari Cramer untuk sistem besar)
-- **SPL dengan Invers Matriks**:
-    - `x = A⁻¹b`
+    - Rumus (ubah `Ax=b` ke bentuk segitiga atas, lalu substitusi mundur)
+- **SPL Dengan Invers**:
+    - Rumus (`x = A^-1 * b`)
 - **Rank Matriks**:
-    - Banyak baris tak-nol (row echelon form)
+    - Rumus (jumlah baris tak-nol setelah row echelon form)
 - **Trace Matriks**:
-    - Jumlah elemen diagonal utama
-- **Cek Jenis Matriks**:
-    - Simetris, Diagonal, Identitas
-- **Nilai & Vektor Eigen (2x2)**:
-    - Eigenvalue (`λ² - trace*λ + det = 0`)
-    - Eigenvector (dari `(A-λI)v=0`)
-- **Vektor 2D**:
-    - Sudut terhadap Sumbu-X (`atan2(y, x)`)
+    - Rumus (`trace(A) = Σaii`)
+- **Matriks Simetris**:
+    - Syarat (`A == A^T`)
+- **Matriks Diagonal**:
+    - Syarat (`aij = 0 untuk i != j`)
+- **Matriks Identitas (Cek)**:
+    - Syarat (`A == I`)
+- **Eigenvalue 2x2**:
+    - Rumus (`λ² - trace(A)λ + det(A) = 0`)
+- **Eigenvector 2x2**:
+    - Rumus (`(A - λI)v = 0`)
+- **Sudut Vektor 2D terhadap Sumbu-X**:
+    - Rumus (`atan2(y, x)`)
+- **Ordo Matriks**:
+    - Rumus (`ordo = jumlah baris x jumlah kolom`)
+- **Matriks Persegi**:
+    - Syarat (`jumlah baris == jumlah kolom`)
+- **Minor Matriks**:
+    - Rumus (hapus baris ke-i dan kolom ke-j)
+- **Kofaktor Elemen**:
+    - Rumus (`Cij = (-1)^(i+j) * det(minor i,j)`)
+- **Matriks Kofaktor**:
+    - Rumus (`C = [Cij]`)
+- **Adjoin Matriks**:
+    - Rumus (`adj(A) = transpose(matriks kofaktor)`)
+- **Matriks Nol (Cek)**:
+    - Syarat (`semua elemen == 0`)
+- **Matriks Skalar**:
+    - Syarat (matriks diagonal dengan semua elemen diagonal sama)
+- **Matriks Segitiga Atas**:
+    - Syarat (`aij = 0 untuk i > j`)
+- **Matriks Segitiga Bawah**:
+    - Syarat (`aij = 0 untuk i < j`)
+- **Matriks Ortogonal**:
+    - Syarat (`A * A^T = I`)
+- **Matriks Singular**:
+    - Syarat (`det(A) = 0`)
+- **Row Echelon Form**:
+    - Rumus (pivot tiap baris berada di kanan pivot baris sebelumnya)
+- **Reduced Row Echelon Form**:
+    - Rumus (REF dengan pivot bernilai 1 dan kolom pivot bernilai 0 selain pivot)
+- **Operasi Baris Tukar**:
+    - Rumus (`Ri <-> Rj`)
+- **Operasi Baris Kali**:
+    - Rumus (`Ri -> kRi`)
+- **Operasi Baris Tambah Kelipatan**:
+    - Rumus (`Ri -> Ri + kRj`)
+- **Pangkat Matriks**:
+    - Rumus (`A^n = A * A * ... * A`)
+- **Determinan Gauss**:
+    - Rumus (hasil kali pivot diagonal, tanda berubah jika baris ditukar)
+- **Eigen Dominan NxN**:
+    - Rumus (Power Iteration, pendekatan nilai eigen terbesar dominan)
+- **Proyeksi Skalar Vektor**:
+    - Rumus (`comp_v(u) = (u·v) / |v|`)
+- **Komponen Vektor**:
+    - Rumus (`u = komponen sejajar + komponen tegak lurus`)
+- **Vektor Paralel**:
+    - Syarat (`u = k * v`)
+- **Vektor Ortogonal**:
+    - Syarat (`u · v = 0`)
+- **Luas Jajargenjang dari Vektor**:
+    - Rumus (`L = |u x v|`)
+- **Luas Segitiga dari Vektor**:
+    - Rumus (`L = 1/2 * |u x v|`)
+- **Triple Scalar Product**:
+    - Rumus (`u · (v x w)`)
+- **Volume Parallelepiped**:
+    - Rumus (`V = |u · (v x w)|`)
+- **Vektor Satuan dari Dua Titik**:
+    - Rumus (`(B - A) / |B - A|`)
+- **Titik Tengah**:
+    - Rumus (`((x1+x2)/2, (y1+y2)/2, ...)`)
+- **Jarak Titik ke Garis**:
+    - Rumus (`|AP x AB| / |AB|`)
+- **Jarak Titik ke Bidang**:
+    - Rumus (`|n · (P - P0)| / |n|`)
+- **Persamaan Garis 2D dari Dua Titik**:
+    - Rumus (`ax + by + c = 0`)
+- **Persamaan Garis 3D dari Dua Titik**:
+    - Rumus (`P = P0 + t * arah`)
+- **Persamaan Bidang dari Normal**:
+    - Rumus (`ax + by + cz + d = 0`)
+- **Persamaan Bidang dari Tiga Titik**:
+    - Rumus (`normal = (B-A) x (C-A)`)
+- **Kesamaan Matriks**:
+    - Syarat (ordo sama dan setiap elemen sama dalam toleransi)
+- **Matriks Diagonal dari List**:
+    - Rumus (`D[i][i] = diagonal[i]`)
+- **Perkalian Hadamard**:
+    - Rumus (`A ⊙ B = [aij * bij]`)
+- **Perkalian Kronecker**:
+    - Rumus (`A ⊗ B = blok aij * B`)
+- **Gabung Horizontal Matriks**:
+    - Rumus (`[A B]`)
+- **Gabung Vertikal Matriks**:
+    - Rumus (`[A; B]`)
+- **Matriks Augmented**:
+    - Rumus (`[A | b]`)
+- **Norma Frobenius**:
+    - Rumus (`||A||F = akar(Σaij²)`)
+- **Norma Maksimum Baris**:
+    - Rumus (`max Σ|aij| untuk tiap baris`)
+- **Norma Maksimum Kolom**:
+    - Rumus (`max Σ|aij| untuk tiap kolom`)
+- **Bilangan Kondisi 2x2**:
+    - Rumus (`cond(A) = ||A|| * ||A^-1||`)
+- **Dekomposisi LU**:
+    - Rumus (`A = L * U`)
+- **Substitusi Maju**:
+    - Rumus (menyelesaikan `Ly = b`)
+- **Substitusi Mundur**:
+    - Rumus (menyelesaikan `Ux = y`)
+- **SPL Dekomposisi LU**:
+    - Rumus (`A = LU`, lalu `Ly=b` dan `Ux=y`)
+- **Dekomposisi Cholesky**:
+    - Rumus (`A = L * L^T`)
+- **Gram-Schmidt**:
+    - Rumus (membentuk basis ortonormal dari kumpulan vektor)
+- **Dekomposisi QR**:
+    - Rumus (`A = Q * R`)
+- **Least Squares**:
+    - Rumus (`x = (A^T A)^-1 A^T b`)
+- **Matriks Rotasi 2D**:
+    - Rumus (`[[cosθ, -sinθ], [sinθ, cosθ]]`)
+- **Matriks Skala 2D**:
+    - Rumus (`[[sx, 0], [0, sy]]`)
+- **Matriks Refleksi Sumbu-X 2D**:
+    - Rumus (`[[1, 0], [0, -1]]`)
+- **Matriks Refleksi Sumbu-Y 2D**:
+    - Rumus (`[[-1, 0], [0, 1]]`)
+- **Transformasi Vektor**:
+    - Rumus (`v' = A * v`)
+- **Rotasi Vektor 2D**:
+    - Rumus (`v' = R(θ) * v`)
+- **Matriks Rotasi X 3D**:
+    - Rumus (`[[1,0,0], [0,cosθ,-sinθ], [0,sinθ,cosθ]]`)
+- **Matriks Rotasi Y 3D**:
+    - Rumus (`[[cosθ,0,sinθ], [0,1,0], [-sinθ,0,cosθ]]`)
+- **Matriks Rotasi Z 3D**:
+    - Rumus (`[[cosθ,-sinθ,0], [sinθ,cosθ,0], [0,0,1]]`)
+- **Refleksi Vektor terhadap Normal**:
+    - Rumus (`v' = v - 2(v·n)n`)
+- **Interpolasi Linear Vektor**:
+    - Rumus (`lerp = (1-t)v1 + tv2`)
+- **Sudut Tiga Titik**:
+    - Rumus (`∠ABC = sudut antara BA dan BC`)
+- **Centroid / Titik Pusat**:
+    - Rumus (`C = rata-rata semua koordinat titik`)
+- **Koordinat Barycentric 2D**:
+    - Rumus (`P = uA + vB + wC`, `u+v+w=1`)
+- **Titik di Dalam Segitiga 2D**:
+    - Syarat (`u >= 0`, `v >= 0`, `w >= 0`)
+- **Polar ke Kartesius**:
+    - Rumus (`x = r cosθ`, `y = r sinθ`)
+- **Kartesius ke Polar**:
+    - Rumus (`r = akar(x²+y²)`, `θ = atan2(y,x)`)
+- **Matriks Anti-Simetris**:
+    - Syarat (`A^T = -A`)
+- **Matriks Idempoten**:
+    - Syarat (`A^2 = A`)
+- **Matriks Involutori**:
+    - Syarat (`A^2 = I`)
+- **Matriks Nilpoten**:
+    - Syarat (ada `k` sehingga `A^k = 0`)
+- **Matriks Permutasi (Cek)**:
+    - Syarat (tiap baris dan kolom punya tepat satu angka 1)
+- **Matriks Toeplitz**:
+    - Syarat (setiap diagonal kiri-atas ke kanan-bawah bernilai sama)
+- **Matriks Positif Definit 2x2**:
+    - Syarat (`a > 0` dan `det(A) > 0`)
+- **Matriks Blok**:
+    - Rumus (`[[A, B], [C, D]]`)
+- **Matriks Vandermonde**:
+    - Rumus (`V[i][j] = xi^j`)
+- **Matriks Permutasi**:
+    - Rumus (`P[i][urutan[i]] = 1`)
+- **Komutator Matriks**:
+    - Rumus (`[A,B] = AB - BA`)
+- **Antikomutator Matriks**:
+    - Rumus (`{A,B} = AB + BA`)
+- **Matriks Proyeksi dari Vektor**:
+    - Rumus (`P = vv^T / (v^T v)`)
+- **Matriks Householder**:
+    - Rumus (`H = I - 2vv^T/(v^T v)`)
+- **Matriks Givens**:
+    - Rumus (rotasi pada bidang indeks `i-j`)
+- **Matriks Kovariansi**:
+    - Rumus (`cov(x,y) = Σ((x-mean_x)(y-mean_y)) / (n-1)`)
+- **Matriks Korelasi**:
+    - Rumus (`corr(x,y) = cov(x,y) / (sx * sy)`)
+- **Eksponensial Matriks**:
+    - Rumus (`e^A = I + A + A²/2! + A³/3! + ...`)
+- **Pseudoinverse Kiri**:
+    - Rumus (`A+ = (A^T A)^-1 A^T`)
+- **Pseudoinverse Kanan**:
+    - Rumus (`A+ = A^T(AA^T)^-1`)
+- **Cross Product 2D Skalar**:
+    - Rumus (`u x v = u1v2 - u2v1`)
+- **Sudut Berarah 2D**:
+    - Rumus (`atan2(u x v, u · v)`)
+- **Orientasi Tiga Titik 2D**:
+    - Rumus (`orientasi = (B-A) x (C-A)`)
+- **Proyeksi Titik ke Garis**:
+    - Rumus (`P' = A + (((P-A)·AB)/(AB·AB)) * AB`)
+- **Refleksi Titik terhadap Garis**:
+    - Rumus (`P_refleksi = 2P_proyeksi - P`)
+- **Proyeksi Titik ke Bidang**:
+    - Rumus (`P' = P - ((P-P0)·n_satuan)n_satuan`)
+- **Refleksi Titik terhadap Bidang**:
+    - Rumus (`P_refleksi = 2P_proyeksi - P`)
+- **Perpotongan Dua Garis 2D**:
+    - Rumus (`A + t(B-A)`, dengan `t` dari cross product)
+- **Perpotongan Garis dan Bidang**:
+    - Rumus (`P = P0 + t*d`, `t = n·(Q-P0)/(n·d)`)
+- **Sudut antara Garis 2D**:
+    - Rumus (sudut terkecil antara dua vektor arah)
+- **Sudut antara Bidang**:
+    - Rumus (sudut antara dua vektor normal bidang)
+- **Jarak Dua Garis Sejajar 2D**:
+    - Rumus (jarak salah satu titik garis kedua ke garis pertama)
+- **Jarak Dua Garis Bersilangan 3D**:
+    - Rumus (`|((P2-P1)·(d1xd2))| / |d1xd2|`)
+- **Matriks Translasi 2D**:
+    - Rumus (`[[1,0,tx], [0,1,ty], [0,0,1]]`)
+- **Matriks Shear 2D**:
+    - Rumus (`[[1,shx,0], [shy,1,0], [0,0,1]]`)
+- **Transformasi Titik 2D Homogen**:
+    - Rumus (`P' = H * [x,y,1]^T`)
+- **Matriks Translasi 3D**:
+    - Rumus (`[[1,0,0,tx], [0,1,0,ty], [0,0,1,tz], [0,0,0,1]]`)
+- **Matriks Skala 3D**:
+    - Rumus (`[[sx,0,0,0], [0,sy,0,0], [0,0,sz,0], [0,0,0,1]]`)
+- **Transformasi Titik 3D Homogen**:
+    - Rumus (`P' = H * [x,y,z,1]^T`)
+- **Silinder ke Kartesius**:
+    - Rumus (`x = r cosθ`, `y = r sinθ`, `z = z`)
+- **Kartesius ke Silinder**:
+    - Rumus (`r = akar(x²+y²)`, `θ = atan2(y,x)`, `z = z`)
+- **Bola ke Kartesius**:
+    - Rumus (`x = r sinφ cosθ`, `y = r sinφ sinθ`, `z = r cosφ`)
+- **Kartesius ke Bola**:
+    - Rumus (`r = akar(x²+y²+z²)`, `θ = atan2(y,x)`, `φ = arccos(z/r)`)
 
 ## Cara Penggunaan
 
