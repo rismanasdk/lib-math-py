@@ -34,10 +34,17 @@ def deret_geometri_infinity(suku_pertama: float, rasio: float) -> float:
         )
     return suku_pertama / (1 - rasio)
 
-def barisan_fibonacci(suku_N: int):
-    if suku_N <= 0: return 0
-    if suku_N == 1: return 1
-    return barisan_fibonacci(suku_N - 1) + barisan_fibonacci(suku_N - 2)
+def barisan_fibonacci(suku_N: int, memo: dict = None) -> int:
+    if memo is None:
+        memo = {}
+    if suku_N <= 0:
+        return 0
+    if suku_N == 1:
+        return 1
+    if suku_N in memo:
+        return memo[suku_N]
+    memo[suku_N] = barisan_fibonacci(suku_N - 1, memo) + barisan_fibonacci(suku_N - 2, memo)
+    return memo[suku_N]
 
 def deret_bilangan_asli(suku_N: int) -> float:
     """
