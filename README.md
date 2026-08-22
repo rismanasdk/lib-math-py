@@ -55,7 +55,15 @@ Kumpulan fungsi Python untuk menghitung rumus matematika
     - Rumus (`suku pertama / (1 - rasio)`)
 - **Deret Fibonacci**:
     - Rumus (`N = U_{n-1} + U_{n-2}`)
-
+- **Bilangan Asli**:
+    - Syarat (`Hanya bisa bilangan positif, akan menghasilkan error jika negarif atau kurang dari 1`)
+    - Rumus (`suku N * (suku N + 1) / 2`)
+- **Bilangan Kuadrat**:
+    - Syarat (`Hanya bisa bilangan positif, akan menghasilkan error jika negarif atau kurang dari 1`)
+    - Rumus (`suku N * (suku N + 1) * (2 * suku N + 1) / 6`)
+- **Pangkat Tiga**:
+    - Syarat (`Hanya bisa bilangan positif, akan menghasilkan error jika negarif atau kurang dari 1`)
+    - Rumus (`(suku N * (suku N + 1) / 2) ** 2`)
 
 ### 4. Bisnis & Logika (`bisnis_logic.py`)
 - **Diskon**: Menghitung nilai potongan

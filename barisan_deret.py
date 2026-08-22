@@ -34,7 +34,34 @@ def deret_geometri_infinity(suku_pertama: float, rasio: float) -> float:
         )
     return suku_pertama / (1 - rasio)
 
-def barisan_fibonacci(n: int):
-    if n <= 0: return 0
-    if n == 1: return 1
-    return barisan_fibonacci(n - 1) + barisan_fibonacci(n - 2)
+def barisan_fibonacci(suku_N: int):
+    if suku_N <= 0: return 0
+    if suku_N == 1: return 1
+    return barisan_fibonacci(suku_N - 1) + barisan_fibonacci(suku_N - 2)
+
+def deret_bilangan_asli(suku_N: int) -> float:
+    """
+    Hanya bilangan positif
+    """
+    if suku_N < 1:
+        raise ValueError("Tidak bisa kurang dari 1 atau negatif")
+    else:
+        return suku_N * (suku_N + 1) / 2
+
+def deret_bilangan_kuadrat(suku_N: int) -> float:
+    """
+    Hanya bilangan positif
+    """
+    if suku_N < 1:
+        raise ValueError("Tidak bisa kurang dari 1 atau negatif")
+    else:
+        return suku_N * (suku_N + 1) * (2 * suku_N + 1) / 6
+
+def deret_pangkat_tiga(suku_N: int) -> float:
+    """
+    Hanya bilangan positif
+    """
+    if suku_N < 1:
+        raise ValueError("Tidak bisa kurang dari 1 atau negatif")
+    else:
+        return (suku_N * (suku_N + 1)/2) ** 2
