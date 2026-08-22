@@ -386,6 +386,58 @@ Kumpulan fungsi Python untuk menghitung rumus matematika
 - **Kovariansi**:
     - Rumus (`Σ(x-mean_x)(y-mean_y) / (n-1)`)
 
+### 8. Peluang (`peluang.py`)
+- **Faktorial**:
+    - Rumus (`n! = n * (n-1) * ... * 1`)
+- **Permutasi**:
+    - Permutasi Biasa (`n! / (n-r)!`)
+    - Permutasi Siklis (`(n-1)!`)
+    - Permutasi dengan Pengulangan (`n! / (k1! * k2! * ...)`)
+- **Kombinasi**:
+    - Rumus (`n! / (r! * (n-r)!)`)
+- **Peluang Dasar**:
+    - Peluang Kejadian (`n(A) / n(S)`)
+    - Peluang Komplemen (`1 - P(A)`)
+    - Frekuensi Harapan (`P(A) * banyak percobaan`)
+- **Peluang Kejadian Majemuk**:
+    - Gabungan (`P(A) + P(B) - P(A∩B)`)
+    - Saling Lepas (`P(A) + P(B)`)
+    - Kejadian Bebas (`P(A) * P(B)`)
+    - Peluang Bersyarat (`P(A∩B) / P(B)`)
+    - Kejadian Tidak Bebas (`P(A) * P(B|A)`)
+- **Teorema Bayes**:
+    - Rumus (`[P(B|A) * P(A)] / P(B)`)
+- **Distribusi Binomial**:
+    - P(X=x) (`C(n,x) * p^x * (1-p)^(n-x)`)
+    - Ekspektasi (`n*p`)
+    - Variansi (`n*p*(1-p)`)
+- **Distribusi Poisson**:
+    - P(X=x) (`(λ^x * e^-λ) / x!`)
+- **Distribusi Normal**:
+    - PDF (fungsi kepadatan peluang, kurva lonceng)
+    - Z ke Peluang (CDF distribusi normal standar, pakai fungsi error)
+- **Kombinasi dengan Pengulangan**:
+    - Rumus (`C(n+r-1, r)`)
+- **Distribusi Hipergeometrik** *(tanpa pengembalian)*:
+    - P(X=x) (`[C(K,x) * C(N-K,n-x)] / C(N,n)`)
+    - Ekspektasi (`n * (K/N)`)
+    - Variansi (`n*(K/N)*((N-K)/N)*((N-n)/(N-1))`)
+- **Distribusi Geometrik**:
+    - P(X=x) (`(1-p)^(x-1) * p`)
+    - Ekspektasi (`1/p`)
+    - Variansi (`(1-p)/p²`)
+- **Distribusi Multinomial**:
+    - Rumus (`n!/(x1!*x2!*...) * (p1^x1 * p2^x2 * ...)`)
+- **Ekspektasi & Variansi Umum** *(distribusi diskrit custom)*:
+    - Ekspektasi (`Σ(x * P(x))`)
+    - Variansi (`Σ((x-E(X))² * P(x))`)
+- **Odds**:
+    - Odds Mendukung (`P(A) : P(A')`)
+    - Odds ke Peluang (`a / (a+b)`)
+- **Ruang Sampel Aktual**:
+    - Generator Kombinasi (daftar konkret, bukan cuma hitungan)
+    - Generator Permutasi (daftar konkret, bukan cuma hitungan)
+
 ## Cara Penggunaan
 
 Import fungsi dari file modul yang sesuai:
