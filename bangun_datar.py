@@ -1,3 +1,5 @@
+import math
+
 def persegi_keliling(sisi: int):
     return 4 * sisi
 
@@ -45,3 +47,76 @@ def lingkaran_keliling(jari_jari: int) -> float:
 
 def lingkaran_luas(jari_jari: int) -> float:
     return 3.14 * jari_jari ** 2
+
+def poligon_beraturan_keliling(jumlah_sisi: int, sisi: float) -> float:
+    return jumlah_sisi * sisi
+
+
+def poligon_beraturan_luas(jumlah_sisi: int, sisi: float) -> float:
+    return (jumlah_sisi * sisi ** 2) / (4 * math.tan(math.pi / jumlah_sisi))
+
+
+def poligon_beraturan_apotema(jumlah_sisi: int, sisi: float) -> float:
+    return sisi / (2 * math.tan(math.pi / jumlah_sisi))
+
+
+def poligon_beraturan_sudut_dalam(jumlah_sisi: int) -> float:
+    """
+    Hasil dalam derajat
+    """
+    return ((jumlah_sisi - 2) * 180) / jumlah_sisi
+
+
+def segilima_keliling(sisi: float) -> float:
+    return poligon_beraturan_keliling(5, sisi)
+
+
+def segilima_luas(sisi: float) -> float:
+    return poligon_beraturan_luas(5, sisi)
+
+
+def segienam_keliling(sisi: float) -> float:
+    return poligon_beraturan_keliling(6, sisi)
+
+
+def segienam_luas(sisi: float) -> float:
+    return poligon_beraturan_luas(6, sisi)
+
+def segitujuh_keliling(sisi: float) -> float:
+    return poligon_beraturan_keliling(7, sisi)
+
+
+def segitujuh_luas(sisi: float) -> float:
+    return poligon_beraturan_luas(7, sisi)
+
+
+
+def segidelapan_keliling(sisi: float) -> float:
+    return poligon_beraturan_keliling(8, sisi)
+
+
+def segidelapan_luas(sisi: float) -> float:
+    return poligon_beraturan_luas(8, sisi)
+
+
+def segisembilan_keliling(sisi: float) -> float:
+    return poligon_beraturan_keliling(9, sisi)
+
+
+def segisembilan_luas(sisi: float) -> float:
+    return poligon_beraturan_luas(9, sisi)
+
+
+def segisepuluh_keliling(sisi: float) -> float:
+    return poligon_beraturan_keliling(10, sisi)
+
+
+def segisepuluh_luas(sisi: float) -> float:
+    return poligon_beraturan_luas(10, sisi)
+
+def segduabelas_keliling(sisi: float) -> float:
+    return poligon_beraturan_keliling(12, sisi)
+
+
+def segduabelas_luas(sisi: float) -> float:
+    return poligon_beraturan_luas(12, sisi)
