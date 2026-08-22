@@ -236,6 +236,69 @@ Kumpulan fungsi Python untuk menghitung rumus matematika
 - **Diskon**: Menghitung nilai potongan
 - **Bunga**: Menghitung bunga tunggal per bulan
 
+### 5. Aljabar (`aljabar.py`)
+- **Persamaan Linear Satu Variabel**:
+    - Rumus (`x = -b / a`, dari bentuk `ax + b = 0`)
+- **SPLDV (Sistem Persamaan Linear Dua Variabel)**:
+    - Metode Cramer (`x = (c1*b2 - c2*b1) / (a1*b2 - a2*b1)`, `y = (a1*c2 - a2*c1) / (a1*b2 - a2*b1)`)
+- **SPLTV (Sistem Persamaan Linear Tiga Variabel)**:
+    - Metode Cramer (determinan 3x3, `x = Dx/D`, `y = Dy/D`, `z = Dz/D`)
+- **Persamaan Kuadrat**:
+    - Diskriminan (`b ** 2 - 4 * a * c`)
+    - Akar / Rumus ABC (`(-b ± akar(diskriminan)) / (2 * a)`)
+    - Jenis Akar (berdasarkan tanda diskriminan)
+    - Sumbu Simetri (`-b / (2 * a)`)
+    - Titik Puncak (`(sumbu simetri, f(sumbu simetri))`)
+    - Jumlah Akar (`-b / a`)
+    - Hasil Kali Akar (`c / a`)
+- **Pertidaksamaan Linear**:
+    - Batas Nilai (`x = -b / a`, tanda dicek manual)
+- **Pertidaksamaan Kuadrat**:
+    - Titik Batas (pakai rumus ABC, interval dicek manual)
+- **Fungsi Linear**:
+    - `f(x)` (`m * x + c`)
+    - Gradien dari 2 titik (`(y2 - y1) / (x2 - x1)`)
+- **Fungsi Kuadrat**:
+    - `f(x)` (`a * x ** 2 + b * x + c`)
+- **Fungsi Eksponen**:
+    - `f(x)` (`a * basis ** x`)
+- **Fungsi Logaritma**:
+    - `f(x)` (`log basis (nilai)`)
+- **FPB (Faktor Persekutuan Terbesar)**:
+    - Algoritma Euclidean
+- **KPK (Kelipatan Persekutuan Terkecil)**:
+    - Rumus (`|a * b| / FPB(a, b)`)
+- **Interval Pertidaksamaan Linear**:
+    - Solusi (`x [tanda] -b/a`, tanda dibalik otomatis kalau a negatif)
+- **Interval Pertidaksamaan Kuadrat**:
+    - Solusi (berdasarkan akar-akar & arah buka parabola)
+- **Nilai Mutlak**:
+    - `|x|` (`abs(x)`)
+    - Persamaan `|ax+b|=c` (`x = (c-b)/a` atau `x = (-c-b)/a`)
+    - Pertidaksamaan `|ax+b|<c` (`-c < ax+b < c`)
+    - Pertidaksamaan `|ax+b|>c` (`ax+b<-c` atau `ax+b>c`)
+- **Operasi Polinomial** *(list koefisien, pangkat tertinggi ke terendah)*:
+    - Tambah, Kurang, Kali
+    - Evaluasi nilai (Metode Horner)
+    - Pembagian dengan (x-akar) (Metode Horner)
+- **Faktorisasi**:
+    - Selisih Kuadrat (`a²x² - b² = (ax-b)(ax+b)`)
+    - Trinomial (`ax²+bx+c` → faktor pakai akar-akar)
+- **Fungsi Kubik**:
+    - `f(x)` (`a*x³ + b*x² + c*x + d`)
+- **Komposisi Fungsi**:
+    - `(f∘g)(x) = f(g(x))`
+- **Fungsi Invers (Linear)**:
+    - Dari `f(x)=mx+c` → `f⁻¹(x) = (x-c)/m`
+- **Fungsi Rasional**:
+    - Evaluasi `f(x) = p(x)/q(x)`
+    - Domain terlarang (pembuat nol penyebut, derajat 1 & 2)
+- **Barisan dari Fungsi**:
+    - `Un = f(n)`
+- **Program Linear Dasar**:
+    - Titik Potong 2 Garis (metode Cramer)
+    - Nilai Optimum (maksimum/minimum dari titik-titik pojok)
+
 ## Cara Penggunaan
 
 Import fungsi dari file modul yang sesuai:
