@@ -299,6 +299,48 @@ Kumpulan fungsi Python untuk menghitung rumus matematika
     - Titik Potong 2 Garis (metode Cramer)
     - Nilai Optimum (maksimum/minimum dari titik-titik pojok)
 
+### 6. Trigonometri (`trigonometri.py`)
+- **Fungsi Dasar** *(input dalam derajat)*:
+    - Sin, Cos, Tan
+- **Fungsi Kebalikan**:
+    - Csc (`1/sin`), Sec (`1/cos`), Cot (`1/tan`)
+- **Fungsi Invers**:
+    - Arcsin, Arccos, Arctan (output dalam derajat)
+- **Konversi**:
+    - Derajat ke Radian, Radian ke Derajat
+- **Aturan Sinus**:
+    - Cari Sisi (`a/sin(A) = b/sin(B)`)
+    - Cari Sudut (dari perbandingan sisi & sudut yang diketahui)
+- **Aturan Cosinus**:
+    - Cari Sisi (`a² = b² + c² - 2bc·cos(A)`)
+    - Cari Sudut (`cos(A) = (b²+c²-a²) / (2bc)`)
+- **Luas Segitiga (Trigonometri)**:
+    - Dua Sisi + Sudut Apit (`1/2 * a * b * sin(C)`)
+- **Identitas Trigonometri**:
+    - Pythagoras (`sin²(x) + cos²(x) = 1`, buat verifikasi)
+    - Sin/Cos Jumlah Dua Sudut
+    - Sin/Cos Selisih Dua Sudut
+    - Sin/Cos Sudut Rangkap (double angle)
+- **Tan Jumlah & Selisih Dua Sudut**:
+    - Jumlah (`(tanA+tanB)/(1-tanA·tanB)`)
+    - Selisih (`(tanA-tanB)/(1+tanA·tanB)`)
+- **Tan Sudut Rangkap**:
+    - Rumus (`2tan(x)/(1-tan²(x))`)
+- **Rumus Setengah Sudut**:
+    - Sin (`±√((1-cosX)/2)`)
+    - Cos (`±√((1+cosX)/2)`)
+    - Tan (`sinX/(1+cosX)`)
+- **Perkalian ke Penjumlahan (Product-to-Sum)**:
+    - sin·cos, cos·cos, sin·sin
+- **Penjumlahan ke Perkalian (Sum-to-Product)**:
+    - sin+sin, sin-sin, cos+cos, cos-cos
+- **Sudut Elevasi & Depresi**:
+    - Tinggi dari Elevasi (`jarak horizontal * tan(sudut elevasi)`)
+    - Jarak dari Depresi (`tinggi / tan(sudut depresi)`)
+- **Karakteristik Fungsi Trigonometri**:
+    - Bentuk Umum f(x) (`amplitudo * sin(faktor periode*(x-pergeseran fase)) + pergeseran vertikal`)
+    - Periode (`360 / faktor periode`)
+
 ## Cara Penggunaan
 
 Import fungsi dari file modul yang sesuai:
