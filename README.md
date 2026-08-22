@@ -41,7 +41,21 @@ Kumpulan fungsi Python untuk menghitung rumus matematika
     - Rumus (`a + (suku N - 1) * perbedaan`)
 - **Deret Aritmatika**:
     - Rumus (`jumlah suku N/2 * (2 * suku pertama + (jumlah suku N - 1) * perbedaan)`)
- 
+- **Barisan Geometri**:
+    - Rumus (`suku pertama * rasio ** (suku N - 1)`)
+- **Deret Geometri**:
+    - Rumus rasio(+) (`suku pertama * (rasio ** suku N - 1) / (rasio -1)`)
+    - Rumus rasio(-) (`suku pertama * (1 - rasio ** suku N) / (1 - rasio)`)
+- **Deret Geometri**:
+    - Rumus rasio == 1 (`suku pertama * jumlah suku N`)
+    - Rumus rasio > 1 (`suku pertama * (rasio ** jumlah suku N - 1) / (rasio - 1)`)
+    - Rumus rasio < 1 (`suku pertama * (1 - rasio ** jumlah suku N) / (1 - rasio)`)
+- **Deret Geometri Infinity**:
+    - Syarat (`-1 < rasio < 1`, kalau di luar itu -> error/divergen)
+    - Rumus (`suku pertama / (1 - rasio)`)
+- **Deret Fibonacci**:
+    - Rumus (`N = U_{n-1} + U_{n-2}`)
+
 
 ### 4. Bisnis & Logika (`bisnis_logic.py`)
 - **Diskon**: Menghitung nilai potongan

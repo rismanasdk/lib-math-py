@@ -1,7 +1,40 @@
-def aritmatika(a: int, n: int):
-    to_list = []
-    n += 1
-    for i in range(a, n):    
-        to_list.append(i)
-    result = sum(to_list)
-    return result
+def barisan_aritmatika(suku_pertama: int, perbedaan: int, suku_N):
+    return suku_pertama + (suku_N - 1) * perbedaan
+
+def deret_aritmatika(jumlah_suku_N: int, suku_pertama: int, perbedaan: int) -> float:
+    return jumlah_suku_N/2 * (2 * suku_pertama + (jumlah_suku_N - 1) * perbedaan)
+
+def barisan_geometri(suku_pertama: int, rasio: int, suku_N) -> float:
+    return suku_pertama * rasio ** (suku_N - 1)
+
+def deret_geometri(jumlah_suku_N: int, suku_pertama: int, rasio: int) -> float:
+    """
+    Menghitung jumlah n suku pertama deret geometri.
+    - rasio == 1  -> semua suku sama, tinggal dikali n
+    - rasio > 1   -> pakai rumus rasio positif
+    - rasio < 1   -> pakai rumus rasio negatif/pecahan 
+    """
+    if rasio == 1:
+        hasil_akhir = suku_pertama * jumlah_suku_N
+    elif rasio > 1:
+        hasil_akhir = suku_pertama * (rasio ** jumlah_suku_N - 1) / (rasio - 1)
+    else:
+        hasil_akhir = suku_pertama * (1 - rasio ** jumlah_suku_N) / (1 - rasio)
+    return hasil_akhir
+
+
+def deret_geometri_infinity(suku_pertama: float, rasio: float) -> float:
+    """
+    Menghitung jumlah tak hingga deret geometri.
+    Syarat konvergen: -1 < rasio < 1 (di luar itu deret gak punya jumlah tak hingga).
+    """
+    if not (-1 < rasio < 1):
+        raise ValueError(
+            "Rasio harus di antara -1 dan 1 (tidak termasuk keduanya) supaya deret konvergen."
+        )
+    return suku_pertama / (1 - rasio)
+
+def barisan_fibonacci(n: int):
+    if n <= 0: return 0
+    if n == 1: return 1
+    return barisan_fibonacci(n - 1) + barisan_fibonacci(n - 2)
