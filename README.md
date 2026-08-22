@@ -341,6 +341,51 @@ Kumpulan fungsi Python untuk menghitung rumus matematika
     - Bentuk Umum f(x) (`amplitudo * sin(faktor periode*(x-pergeseran fase)) + pergeseran vertikal`)
     - Periode (`360 / faktor periode`)
 
+### 7. Statistika (`statistika.py`)
+- **Ukuran Pemusatan Data**:
+    - Mean (`jumlah data / banyak data`)
+    - Median (nilai tengah data terurut)
+    - Modus (nilai paling sering muncul, bisa multimodal)
+- **Ukuran Penyebaran Data**:
+    - Jangkauan/Range (`max - min`)
+    - Ragam Populasi (`Σ(x-mean)² / n`)
+    - Ragam Sampel (`Σ(x-mean)² / (n-1)`)
+    - Simpangan Baku Populasi (`akar(ragam populasi)`)
+    - Simpangan Baku Sampel (`akar(ragam sampel)`)
+    - Simpangan Rata-Rata / MAD (`Σ|x-mean| / n`)
+- **Kuartil, Desil, Persentil**:
+    - Kuartil (Q1, Q2, Q3) — interpolasi linear
+    - Desil (D1-D9)
+    - Persentil (P1-P99)
+    - Jangkauan Interkuartil / IQR (`Q3 - Q1`)
+- **Distribusi Frekuensi**:
+    - Frekuensi (hitungan tiap nilai unik)
+    - Frekuensi Relatif (`frekuensi/total * 100%`)
+    - Frekuensi Kumulatif (akumulasi menaik)
+- **Kemiringan Distribusi**:
+    - Koefisien Kemiringan Pearson (`3*(mean-median)/simpangan baku`)
+- **Standarisasi**:
+    - Z-Score (`(nilai - mean) / simpangan baku`)
+- **Koefisien Variasi**:
+    - CV (`(simpangan baku / mean) * 100%`)
+- **Korelasi & Regresi**:
+    - Korelasi Pearson (r, rentang -1 s/d 1)
+    - Regresi Linear Sederhana (`y = mx + c`, metode least squares)
+    - Prediksi dari Model Regresi
+- **Rata-Rata Khusus**:
+    - Tertimbang/Weighted (`Σ(x*w) / Σw`)
+    - Geometrik (`ⁿ√(x1*x2*...*xn)`, data harus positif)
+    - Harmonik (`n / Σ(1/x)`, data tidak boleh 0)
+- **Data Berkelompok (Interval Kelas)**:
+    - Mean (`Σ(titik tengah * frekuensi) / total frekuensi`)
+    - Median (`tepi bawah + ((n/2 - F)/f) * panjang kelas`)
+    - Modus (`tepi bawah + (d1/(d1+d2)) * panjang kelas`)
+- **Momen & Kurtosis**:
+    - Momen ke-n (`Σ(x-mean)ⁿ / n`)
+    - Kurtosis (`momen ke-4 / simpangan baku⁴ - 3`)
+- **Kovariansi**:
+    - Rumus (`Σ(x-mean_x)(y-mean_y) / (n-1)`)
+
 ## Cara Penggunaan
 
 Import fungsi dari file modul yang sesuai:
