@@ -32,6 +32,32 @@ Kumpulan fungsi Python untuk menghitung rumus matematika
 - **Layang-Layang**: 
     - Keliling (`2 * (sisi 1 + sisi 2)`)
     - Luas (`1/2 * diagonal 1 * diagonal 2`)
+- **Poligon Beraturan Segi-N** *(rumus umum, dasar semua poligon beraturan di bawah)*:
+    - Keliling (`jumlah sisi * sisi`)
+    - Luas (`(jumlah sisi * sisi ** 2) / (4 * tan(π / jumlah sisi))`)
+    - Apotema (`sisi / (2 * tan(π / jumlah sisi))`)
+    - Sudut Dalam (`((jumlah sisi - 2) * 180) / jumlah sisi`)
+- **Segi Lima Beraturan**:
+    - Keliling (`5 * sisi`)
+    - Luas (`(5 * sisi ** 2) / (4 * tan(π/5))`)
+- **Segi Enam Beraturan**:
+    - Keliling (`6 * sisi`)
+    - Luas (`(3 * akar(3) / 2) * sisi ** 2`)
+- **Segi Tujuh Beraturan**:
+    - Keliling (`7 * sisi`)
+    - Luas (`(7 * sisi ** 2) / (4 * tan(π/7))`)
+- **Segi Delapan Beraturan**:
+    - Keliling (`8 * sisi`)
+    - Luas (`(8 * sisi ** 2) / (4 * tan(π/8))`)
+- **Segi Sembilan Beraturan**:
+    - Keliling (`9 * sisi`)
+    - Luas (`(9 * sisi ** 2) / (4 * tan(π/9))`)
+- **Segi Sepuluh Beraturan**:
+    - Keliling (`10 * sisi`)
+    - Luas (`(10 * sisi ** 2) / (4 * tan(π/10))`)
+- **Segi Dua Belas Beraturan**:
+    - Keliling (`12 * sisi`)
+    - Luas (`(12 * sisi ** 2) / (4 * tan(π/12))`)
 
 ### 2. Bangun Ruang (`bangun_ruang.py`)
 - **Kubus**:
