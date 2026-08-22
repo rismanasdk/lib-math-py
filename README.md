@@ -438,6 +438,51 @@ Kumpulan fungsi Python untuk menghitung rumus matematika
     - Generator Kombinasi (daftar konkret, bukan cuma hitungan)
     - Generator Permutasi (daftar konkret, bukan cuma hitungan)
 
+### 9. Matriks & Vektor (`matriks_vektor.py`)
+- **Operasi Dasar Matriks** *(matriks berupa list of list)*:
+    - Tambah, Kurang (elemen per elemen)
+    - Kali Skalar
+    - Kali Matriks (baris × kolom)
+    - Transpose
+- **Determinan**:
+    - 2x2 (`ad - bc`)
+    - 3x3 (Aturan Sarrus)
+    - NxN (Ekspansi Kofaktor, rekursif)
+- **Invers Matriks**:
+    - 2x2 (`(1/det) * [d -b; -c a]`)
+    - 3x3 (Matriks Adjoin/Kofaktor Transpose)
+- **Utilitas Matriks**:
+    - Matriks Identitas
+    - Matriks Nol
+- **SPL dengan Matriks**:
+    - Metode Cramer berbasis matriks (untuk N variabel)
+- **Operasi Dasar Vektor**:
+    - Tambah, Kurang, Kali Skalar
+    - Panjang/Magnitudo (`√(x²+y²+...)`)
+    - Dot Product (`Σ(x1*x2)`)
+    - Cross Product (khusus 3D)
+    - Sudut Antar Vektor (`cos(θ) = (v1·v2)/(|v1||v2|)`)
+    - Proyeksi Vektor
+    - Normalisasi (jadi vektor satuan)
+    - Jarak Antar Titik/Vektor
+- **Invers Matriks NxN**:
+    - Metode Gauss-Jordan (generik, semua ukuran)
+- **Eliminasi Gauss**:
+    - Solusi SPL (lebih efisien dari Cramer untuk sistem besar)
+- **SPL dengan Invers Matriks**:
+    - `x = A⁻¹b`
+- **Rank Matriks**:
+    - Banyak baris tak-nol (row echelon form)
+- **Trace Matriks**:
+    - Jumlah elemen diagonal utama
+- **Cek Jenis Matriks**:
+    - Simetris, Diagonal, Identitas
+- **Nilai & Vektor Eigen (2x2)**:
+    - Eigenvalue (`λ² - trace*λ + det = 0`)
+    - Eigenvector (dari `(A-λI)v=0`)
+- **Vektor 2D**:
+    - Sudut terhadap Sumbu-X (`atan2(y, x)`)
+
 ## Cara Penggunaan
 
 Import fungsi dari file modul yang sesuai:
